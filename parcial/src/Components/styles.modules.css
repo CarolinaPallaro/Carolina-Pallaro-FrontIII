@@ -1,4 +1,5 @@
 .form {
+  background-color: rgb(50, 195, 202);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,8 +11,9 @@
   }
   
   .card {
+    background-color:  rgba(50, 194, 202, 0.39);
     padding: 30px;
     border: 1px solid #ccc;
-    margin-top: 2em;
+    margin-top: 1em;
     border-radius: 20px;
   }

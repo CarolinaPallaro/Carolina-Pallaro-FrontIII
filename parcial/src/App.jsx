@@ -1,16 +1,22 @@
-// import { useState } from 'react'
-import Card from './Components/Card'
 import './App.css'
+import Card from './Components/Card'
+import Form from './Components/Form'
+import { useState } from 'react'
 
 function App() {
-  // const [count, setCount] = useState(0)
+  const [persona, setPersona] = useState({})
 
+  const guardarPersona = (nombre, edad, red) => {
+    setPersona({ nombre, edad, red})
+  }
   return (
     <>
-    <div className='App'>
-      <Card />
-    </div>
-      
+      <Form guardarPersona={guardarPersona} />
+      {Object.keys(persona).length === 0 ? undefined : (
+        <Card nombre={persona.nombre} 
+        edad={persona.edad}
+        red={persona.red} />
+      )}
     </>
   )
 }
